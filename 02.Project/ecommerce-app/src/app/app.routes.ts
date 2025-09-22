@@ -11,4 +11,11 @@ export const routes: Routes = [
       ),
     title: 'products',
   },
+  {
+    path:'product-view/:id', 
+    loadComponent: () => import('../app/pages/product-detail/product-detail.component').then(
+      (c)=> c.ProductDetailComponent
+    ),
+    title:'product details'
+  }
 ];

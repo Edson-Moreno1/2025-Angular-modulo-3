@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { CarouselComponent } from "../../components/carousel/carousel.component";
+import { CarouselComponent, carouselImages } from "../../components/carousel/carousel.component";
 
 @Component({
   selector: 'app-home',
+  standalone: true,
   imports: [CarouselComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
@@ -10,5 +11,6 @@ import { CarouselComponent } from "../../components/carousel/carousel.component"
 export class HomeComponent {
   indicators:boolean = false;
   autoPlay: boolean = true;
+ 
 
 }
