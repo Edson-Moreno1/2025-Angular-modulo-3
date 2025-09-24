@@ -2,7 +2,8 @@ import { Directive, OnInit, TemplateRef, ViewContainerRef } from '@angular/core'
 import { AuthService } from '../services/auth/auth.service';
 
 @Directive({
-  selector: '[appAdmin]'
+  selector: '[appAdmin]',
+  standalone:true
 })
 export class AdminDirective implements OnInit{
 
@@ -14,7 +15,7 @@ export class AdminDirective implements OnInit{
 
   }
   ngOnInit(): void {
-
+    this.checkAdminAccess()
   }
   private checkAdminAccess():void{
     const role = this.authService.decodedToken?.role ?? '';
