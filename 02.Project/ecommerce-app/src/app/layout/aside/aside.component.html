@@ -57,7 +57,9 @@
     <div class="flex-1 p-4 overflow-y-auto">
       <app-side-menu [navRoutes]="routes"></app-side-menu>
       <div class="mt-6">
-      <app-side-menu [navRoutes]="adminRoutes" title="Administracion"></app-side-menu>
+      <app-side-menu 
+      *appAdmin
+      [navRoutes]="adminRoutes" title="Administracion"></app-side-menu>
       </div>
     </div>
   </aside>
