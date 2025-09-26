@@ -70,7 +70,7 @@ src/app/
 1. **Sistema de navegación condicional** que muestra contenido según estado de autenticación
 2. **Directivas funcionales** `*appAuthenticated` y `*appNotAuthenticated`
 3. **UI responsive** implementada con Tailwind CSS
-4. **Tests unitarios** para directivas y servicios de autenticación
+
 
 ## Mockups de Referencia
 
