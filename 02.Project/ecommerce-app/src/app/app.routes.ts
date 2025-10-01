@@ -17,5 +17,9 @@ export const routes: Routes = [
       (c)=> c.ProductDetailComponent
     ),
     title:'product details'
+  },
+  {
+    path: 'register', loadComponent:()=> import('../app/pages/register/register.component').then(c=>c.RegisterComponent),
+    title: 'registro'
   }
 ];

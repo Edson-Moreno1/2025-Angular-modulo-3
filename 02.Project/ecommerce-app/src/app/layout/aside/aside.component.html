@@ -55,12 +55,19 @@
       </button>
     </div>
     <div class="flex-1 p-4 overflow-y-auto">
-      <app-side-menu [navRoutes]="routes"></app-side-menu>
-      <div class="mt-6">
+      @if (user) {
+        <app-side-menu [title]="`Willkommen ${user.displayName}`" [navRoutes]="authRoutes"></app-side-menu>
+      }@else {
+        <app-side-menu [navRoutes]="notAuthRoutes"></app-side-menu>
+      }
+      
+      
+      <app-side-menu [navRoutes]="routes" title="menu principal"></app-side-menu>
+    
       <app-side-menu 
       *appAdmin
       [navRoutes]="adminRoutes" title="Administracion"></app-side-menu>
-      </div>
+      
     </div>
   </aside>
 </div>
